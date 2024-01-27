@@ -9,16 +9,16 @@ import { CharacterdetailComponent } from './body/characterdetail/Characterdetail
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch:'full' },
-  {path: 'home', component:HomeComponent},
-  {path: 'characters', component:CharactersComponent},
-  {path: 'character/:id', component:CharacterdetailComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'characters', component: CharactersComponent },
+  { path: 'character/:id', component: CharacterdetailComponent },
   // {path: 'search', component:SearchComponent},
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
